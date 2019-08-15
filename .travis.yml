@@ -1,0 +1,22 @@
+language: node_js
+node_js:
+- node
+cache:
+  directories:
+  - node_modules
+notifications:
+  email: false
+script:
+- npm run build
+- npm run format:check
+- npm run tslint
+- npm run coveralls
+deploy:
+  skip_cleanup: true
+  provider: npm
+  email: matthieu@bovel.net
+  api_key:
+    secure: zQ5btxOhqbVnd8CktjBa5JUpBwUx+RP3P3sES/XmiJy/ngmiDLNYPBK8dDQDmJik5cWXRt5wcaTrB110CVNQCoQyI/yhO9540kKBgbWiuSZ9kK0/VOcQIHYgvmk9ZtsaIBbw4GnTwK4e6rxTz98krX07NBP/h07XLipywmAN3VM+vDKlZFExKElgpr62vLclbf/tQme8wd5xs8PuVwqU2lxiy1P06MXHiYrNhzPK6kGAjXNkxCNRJYWykVHqoMllhcns7UTyxUM/DjA5C3SDT/Cn+QTMIlnZ/hYU1fwl3wGBbnat6NVA68H2vS58cF3W6BPmrqQ6UpkgnppMVASWW9nxRXF83Bd8b5R9CZyCc/LaKEsov878yOIlD3r4J5uaM2FXJHhNboLNaGm4/VHbWE6CiNKgj8OphKMy6UaFwOBnuuSlRJRkCGzkphfP56aqspTy6XmlK+f/W3RCo0nbVgk3P5DdbTLbpmPWoOBCrQJSJ9IqjPeKaZTFXkbFlu9Dw7It79j+26IBVmiZUvfyfw5LeklW2v8MVCbBaFOCYf+7Ff5WseYhnC3t0JblozU+10SyjKxrIzX/hV1oOwShiDNA361krPQ5ifMB3ps/r/gQv5RsqNSjZRugsPIiYiaeWitSowatawGgL+LiO4J4lK1mwya025quKNgZxe+R53A=
+  on:
+    tags: true
+    repo: hashml/hashdocs
