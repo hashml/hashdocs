@@ -2,8 +2,11 @@
 	"name": "@hashml/hashdocs",
 	"description": "The HashDocs markup language",
 	"version": "0.0.1",
-	"main": "dist/index.js",
-	"types": "dist/index.d.ts",
+	"main": "dist/cli.js",
+	"bin": {
+		"hashdocs": "dist/cli.js"
+	},
+	"types": "dist/cli.d.ts",
 	"license": "MIT",
 	"author": "Matthieu Bovel <matthieu@bovel.net>",
 	"contributors": [
@@ -25,6 +28,9 @@
 		"@types/chai": "^4.2.0",
 		"@types/mocha": "^5.2.7",
 		"@types/node": "^12.7.2",
+		"@types/react": "^16.9.2",
+		"@types/react-dom": "^16.9.0",
+		"@types/yargs": "^13.0.2",
 		"chai": "^4.2.0",
 		"coveralls": "^3.0.6",
 		"mocha": "^6.2.0",
@@ -34,7 +40,7 @@
 		"prettier": "^1.18.2",
 		"source-map-support": "^0.5.13",
 		"ts-node": "^8.3.0",
-		"tslint": "^5.18.0",
+		"tslint": "^5.19.0",
 		"typescript": "^3.5.2"
 	},
 	"scripts": {
@@ -53,6 +59,8 @@
 	},
 	"dependencies": {
 		"@hashml/hashml": "^0.2.1",
-		"react": "^16.9.0"
+		"react": "^16.9.0",
+		"react-dom": "^16.9.0",
+		"yargs": "^14.0.0"
 	}
 }
